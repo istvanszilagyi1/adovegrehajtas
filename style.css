@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box; 
+}
+
+/* Általános beállítások és betűtípus */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f9; /* Halvány háttér */
+}
+
+/* Konténer a tartalom központosításához */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px; /* Alap padding */
+}
+
+/* Fejlécek stílusa */
+h1, h2 {
+    font-weight: 700;
+    color: #004d99; /* NAV-hoz hasonló kék */
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    border-bottom: 3px solid #ffcc00; /* Sárga aláhúzás */
+    display: inline-block;
+}
+
+/* Szekciók elválasztása */
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* --- HERO Szekció (Fő Fejléc) --- */
+.hero-section {
+    /* ADÓVÉGREHAJTÁS TÉMÁJÚ HÁTTÉRKÉP */
+    background: linear-gradient(rgba(0, 77, 153, 0.8), rgba(0, 77, 153, 0.8)), url('https://image.pollinations.ai/prompt/Tax%20enforcement,%20legal%20documents,%20calculator,%20serious%20tone,%20professional%20setting,%20blue%20and%20gold%20color%20scheme,%20modern%20style?width=1600&height=600&seed=22') center/cover no-repeat;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: white; /* Fehér cím a sötét háttéren */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+/* Fő címsor animáció (JS-sel aktiválva) */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fadeInSlideUp 1s ease-out;
+}
+
+/* --- CTA Gomb Stílus --- */
+.cta-button {
+    display: inline-block;
+    background-color: #ffcc00; /* Sárga gomb */
+    color: #004d99; /* Kék szöveg */
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #e6b800; /* Sötétebb sárga hover */
+    transform: translateY(-3px); /* Enyhe emelkedés */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.secondary-cta {
+    background-color: #004d99;
+    color: white;
+    margin-top: 20px;
+}
+
+.secondary-cta:hover {
+    background-color: #003366;
+    transform: translateY(-3px);
+}
+
+
+/* --- Profil szekció (Magamról) --- */
+.profile-section .content-wrapper {
+    display: flex; /* Marad flex, de nincs kép */
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    gap: 0; /* Nincs rés a kép helyén */
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Profilképhez kapcsolódó stílusok eltávolítva */
+/* .profile-image-container { ... } */
+/* .profile-image { ... } */
+
+.profile-text {
+    flex-grow: 1;
+    text-align: center; /* Szöveg középre igazítása, ha nincs kép */
+}
+
+.profile-text p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+/* --- Szolgáltatások szekció --- */
+.services-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    width: 30%;
+    min-width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Animáció hozzáadva */
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Enyhe emelkedés hoverre */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.service-item h3 {
+    color: #004d99;
+    font-size: 1.5em;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon {
+    color: #ffcc00; /* Ikon színe */
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* --- Elérhetőség szekció --- */
+.contact-section {
+    background-color: #e6e9f0;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+.contact-details {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.contact-details li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details .fas {
+    color: #004d99;
+    font-size: 1.2em;
+}
+
+/* --- Lábléc --- */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* ➡️ Ezt a kódot kell beillesztened ⬅️ */
+footer a {
+    color: #ffcc00; /* Sárga (kiemelő) szín a linkhez */
+    text-decoration: none; /* Alapértelmezett aláhúzás eltávolítása */
+    transition: color 0.3s; /* Színátmenet a hover effekthez */
+}
+
+footer a:hover {
+    color: white; /* Fehér szín, amikor az egér fölé viszi a felhasználó */
+    text-decoration: underline; /* Aláhúzás hozzáadása hoverre */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 77, 153, 0.75), rgba(0, 0, 0, 0));
+    margin: 0;
+}
+
+/* --- ÚJ ANIMÁCIÓK: Görgetéskor megjelenés (Fade-In) --- */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* --- Média lekérdezések (Reszponzív design) --- */
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 0;
+    }
+
+    /* Fejlécek */
+    .hero-section {
+        padding: 60px 10px;
+    }
+    .hero-section h1 {
+        font-size: 2em; 
+    }
+    .hero-section p {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 25px;
+        padding-top: 10px;
+    }
+
+    /* CTA Gomb - Több gomb esetén blokk elrendezés */
+    .cta-button {
+        display: block; 
+        width: 100%;
+        margin-bottom: 10px; 
+    }
+
+    /* Profil szekció - csak szöveg, középre igazítva */
+    .profile-section .content-wrapper {
+        flex-direction: column; 
+        padding: 20px;
+        border: none; 
+        box-shadow: none;
+    }
+
+    .profile-text {
+        text-align: center; /* Szöveg középre mobilon is */
+    }
+
+    .profile-text p {
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+    
+    /* Szolgáltatások szekció */
+    .services-list {
+        gap: 20px;
+    }
+
+    .service-item {
+        width: 100%; 
+        min-width: auto;
+    }
+}
